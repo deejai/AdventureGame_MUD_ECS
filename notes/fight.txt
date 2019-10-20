@@ -1,0 +1,43 @@
+
+
+
+
+System
+    Fight
+        PromptStart
+        PromptPlayerDeath
+        PromptEnemyCritical
+        PromptVictory
+        TriggerVictor
+        VictoryActionType (room, fight, conversation)
+        Player
+        Enemy
+
+        commandList
+
+
+
+PlayerState
+    fight or conversation or room
+    argument(fight id, conv id, room id)
+
+GameLoop {
+
+    RoomLoop() {
+
+    }
+
+    FightLoop() {
+
+    }
+
+
+    ConversationLoop() {
+
+    }
+
+
+    MainMenuLoop() {
+
+    }
+}

@@ -1,0 +1,78 @@
+agi
+    nimblegod   99% dodge, free attack after dodge
+    catlike     50% dodge, free attack after dodge
+    nimble      35% dodge
+    normal      15% dodge
+    sluggish    0% dodge
+    slothlike   0% dodge, skip first turn
+
+str
+    weapons
+    name        natural     light       medium      heavy
+    ________________________________________________________
+    beastly     NR, +2 dmg  no rest     no rest     no rest
+    beefy       NR, +1 dmg  no rest     no rest     rest 1
+    normal      no rest     no rest     rest 1      rest 2
+    scrawny     no rest     rest 1      rest 2      can't use
+    lethargic   rest 1      rest 1      can't use   can't use
+
+
+
+main hand
+off hand
+chest
+feet
+head
+trinket
+
+Weapons
+gauntlets
+    +50% chance to dodge first non-natural attack of combat
+
+handwraps
+    heal 1 the first time you hit
+
+brass knuckles, natural, 2H
+    +1 damage
+
+steel wire, light, 2H
+
+
+dagger (Light, Main)
+    1 damage
+    +1 damage against opponents using natural attack
+
+shortsword
+
+
+longsword
+
+giant branch
+sledgehammer (Heavy, Both)
+    3 damage
+
+ball and chain (Heavy, Main)
+    2 damage
+    50% chance to stun opponent for 1 turn
+
+
+
+Armor
+buckler (Offhand)
+    50% chance to block the first attack in combat
+
+metal pot (Head)
+    If you would take a killing blow, instead go to critical and consume
+
+
+
+int
+
+
+
+hp
+    boosted
+    healthy
+    wounded
+    critical
+    dead

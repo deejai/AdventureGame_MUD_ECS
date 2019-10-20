@@ -1,0 +1,50 @@
+NPC
+    Description
+    Size
+    Weight
+    Visibility
+    Disposition
+    Equipped
+    Carrying
+    Health
+    Statuses
+    Speed
+    Perks
+
+Item
+    Description
+    Weight
+    Value
+    
+    Visibility
+
+Equipment
+    Description
+    Weight
+    Value
+    CarryPropertyList (statuses, perks, triggers)
+    EquipPropertyList
+    Visibility
+
+Room
+    Description
+    AreaList
+    TransitionList
+
+Container
+    Description
+    ItemList
+
+Area
+    Containers
+    NPCs
+    Interactives
+
+Interactive
+    Description
+    Trigger
+
+Transition
+    RoomId
+
+    

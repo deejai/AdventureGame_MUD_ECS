@@ -1,0 +1,40 @@
+Health
+    (healthy+)
+    healthy
+    weakened
+    critical
+    dead
+
+Statuses
+    poisoned
+        poor npc interaction
+        can't go to healthy
+
+    enraged
+        uncontrollable combat
+        combat boost for lower hp
+        heal to injured after combat
+
+    muted
+        can't talk to npc's
+        can't cast spells
+        (remember to account for forced interaction)
+
+    confused
+        random npc response
+        random combat actions
+
+    ensnared (resloves after combat)
+        can't run from combat
+        lowers agi by 1
+
+    stunned (resolves after combat)
+        skip X combat actions
+
+Equipment
+    Helmet
+        Bucket -> prevents death once, then is deleted
+        Wizard Hat -> +1 spell/combat
+        Hockey Mask (cursed) -> enraged
+
+Attr

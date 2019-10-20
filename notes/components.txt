@@ -1,0 +1,16 @@
+Description
+Size
+Weight
+Value
+CarryProperties
+Description
+EquipProperties
+Visible
+Hostile
+Talks
+Response (csv of response_trigger_ids)
+    ResponseTriggers
+Room (csv of area_ids)
+    Area (csv of object_ids, csv of character_ids)
+        Object [entity with size, weight, value, carryproperties, description]
+Transition

@@ -1,0 +1,55 @@
+ActionType
+    STATE State Transition
+    FIGHT Fight them
+    END End the conversation
+
+
+Fight (npc_id)
+Trans (state_id)
+End (room_id)
+
+
+Conversation
+    StartStateId
+    NPC_Name
+
+    ConversationState
+        StateId
+        Prompt
+        ResponseList (ResponseId, ResponseId, ...)
+
+        Response
+            ResponseId
+            PLAYER_LINE (any string)
+            NPC_LINE (any string)
+            TRIGGER (null or some trigger)
+            ACTION_TYPE (GoToState, Fight, End)
+            ACTION_ARGUMENT
+
+
+
+
+1
+    asuh
+    what?
+    s2
+
+2
+    hi
+    hi!
+    s2
+3
+    fight me
+    ok
+    null
+
+
+
+Prompts
+
+1 Hello traveller
+    ca1
+    ca2
+    ca3
+
+
