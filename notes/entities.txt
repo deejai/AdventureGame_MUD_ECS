@@ -1,50 +1,13 @@
-NPC
-    Description
-    Size
-    Weight
-    Visibility
-    Disposition
-    Equipped
-    Carrying
-    Health
-    Statuses
-    Speed
-    Perks
+Entities
 
 Item
-    Description
-    Weight
-    Value
-    
-    Visibility
-
 Equipment
-    Description
-    Weight
-    Value
-    CarryPropertyList (statuses, perks, triggers)
-    EquipPropertyList
-    Visibility
-
+Player
+NPC
 Room
-    Description
-    AreaList
-    TransitionList
-
-Container
-    Description
-    ItemList
-
-Area
-    Containers
-    NPCs
-    Interactives
-
-Interactive
-    Description
-    Trigger
-
+Combat
+DialogueState
+Response
 Transition
-    RoomId
-
-    
+Spell
+Container
