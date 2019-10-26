@@ -11,9 +11,9 @@ GO
 CREATE TABLE [dbo].[ComponentData_Category](
 	[component_data_id] [int] IDENTITY(1,1) NOT NULL,
 
-	[label] varchar(40) not null,
-	[name] varchar(100) not null,
-	[description] varchar(500) not null
+	[label] [type_shortString] not null,
+	[name] [type_mediumString] not null,
+	[description] [type_longString] not null
 
  CONSTRAINT [PK_ComponentData_Category_component_data_id] PRIMARY KEY CLUSTERED 
 (
@@ -21,4 +21,3 @@ CREATE TABLE [dbo].[ComponentData_Category](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-
