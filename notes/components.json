@@ -1,0 +1,115 @@
+{
+    "Attributes": [
+        "Agility",
+        "Intelligence",
+        "NaturalDamage",
+        "Strength"
+    ],
+    "Blessing": [
+        "Description",
+        "Label",
+        "Name"
+    ],
+    "Category": [
+        "Description",
+        "Label",
+        "Name"
+    ],
+    "CategoryList": [],
+    "CombatEffect": [
+        "Description",
+        "Label",
+        "Name",
+        "Value"
+    ],
+    "CombatEffectList": [],
+    "ContainerList": [],
+    "ContainerSlot": [
+        "DropsOnDeath",
+        "IsInInventory",
+        "ItemId"
+    ],
+    "Description": [
+        "Description",
+        "Name",
+        "UnidentifiedDescription",
+        "UnidentifiedName"
+    ],
+    "Disposition": [
+        "CategoryTagId",
+        "DispositionValue"
+    ],
+    "DispositionList": [],
+    "EquipProperties": [
+        "AgilityModifier",
+        "EquipSlot",
+        "IntelligenceModifier",
+        "StrengthModifier"
+    ],
+    "EquipSlots": [
+        "Arms",
+        "Chest",
+        "Hand",
+        "Head",
+        "Legs",
+        "MainHand",
+        "OffHand",
+        "Trinket"
+    ],
+    "GlobalCondition": [
+        "Active",
+        "Description",
+        "Label",
+        "Name"
+    ],
+    "GlobalConditionList": [],
+    "GoTo": [
+        "DestinationId",
+        "DestinationType"
+    ],
+    "Health": [
+        "Current",
+        "Max",
+        "OverhealMax"
+    ],
+    "Prompt": [
+        "Text"
+    ],
+    "Response": [
+        "FollowUpText",
+        "GoTo",
+        "OptionText",
+        "Trigger"
+    ],
+    "ResponseList": [],
+    "SpellProperties": [
+        "CombatEffectList",
+        "Duration",
+        "Level",
+        "TargetType"
+    ],
+    "Status": [
+        "Description",
+        "Duration",
+        "Label",
+        "Name",
+        "Value"
+    ],
+    "StatusList": [],
+    "TransitionProperties": [
+        "GlobalConditionId",
+        "GoTo",
+        "ListPriority",
+        "WhereText"
+    ],
+    "Trigger": [
+        "Argument",
+        "ArgumentType",
+        "Description",
+        "Label"
+    ],
+    "Value": [
+        "GoldValue",
+        "IsSellable"
+    ]
+}
