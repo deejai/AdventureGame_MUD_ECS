@@ -13,7 +13,7 @@ def generate_component_data_tables():
         for thing in data:
             print(thing)
             for smaller_thing in data[thing]:
-                print(f"{smaller_thing}: {data[thing][smaller_thing]}")
+                print(f"\t{smaller_thing}: {data[thing][smaller_thing]}")
             print()
 
 def main():
