@@ -1,0 +1,115 @@
+{
+    "Attributes": {
+        "Strength": "int",
+        "Agility": "int",
+        "Intelligence": "int",
+        "NaturalDamage": "int"
+    },
+    "Blessing": {
+        "Label": "type_mediumString",
+        "Name": "type_longString",
+        "Description": "type_shortString"
+    },
+    "Category": {
+        "Label": "type_mediumString",
+        "Name": "type_longString",
+        "Description": "type_shortString"
+    },
+    "CategoryList": {},
+    "CombatEffect": {
+        "Label": "type_mediumString",
+        "Name": "type_longString",
+        "Description": "type_shortString",
+        "Value": "int"
+    },
+    "CombatEffectList": {},
+    "ContainerList": {},
+    "ContainerSlot": {
+        "DropsOnDeath": "bit",
+        "IsInInventory": "bit",
+        "ItemId": "fk_component_data_id"
+    },
+    "Description": {
+        "Description",
+        "Name",
+        "UnidentifiedDescription",
+        "UnidentifiedName"
+    },
+    "Disposition": {
+        "CategoryTagId": "fk_component_data_id",
+        "DispositionValue"
+    },
+    "DispositionList": {},
+    "EquipProperties": {
+        "AgilityModifier",
+        "EquipSlot",
+        "IntelligenceModifier",
+        "StrengthModifier"
+    },
+    "EquipSlots": {
+        "Arms",
+        "Chest",
+        "Hand",
+        "Head",
+        "Legs",
+        "MainHand",
+        "OffHand",
+        "Trinket"
+    },
+    "GlobalCondition": {
+        "Active",
+        "Description",
+        "Label",
+        "Name"
+    },
+    "GlobalConditionList": {},
+    "GoTo": {
+        "DestinationId",
+        "DestinationType"
+    },
+    "Health": {
+        "Current",
+        "Max",
+        "OverhealMax"
+    },
+    "Prompt": {
+        "Text"
+    },
+    "Response": {
+        "FollowUpText",
+        "GoTo",
+        "OptionText",
+        "Trigger"
+    },
+    "ResponseList": {},
+    "SpellProperties": {
+        "CombatEffectList",
+        "Duration",
+        "Level",
+        "TargetType"
+    },
+    "Status": {
+        "Description",
+        "Duration",
+        "Label",
+        "Name",
+        "Value"
+    },
+    "StatusList": {},
+    "TransitionProperties": {
+        "GlobalConditionId",
+        "GoTo",
+        "ListPriority",
+        "WhereText"
+    },
+    "Trigger": {
+        "Argument",
+        "ArgumentType",
+        "Description",
+        "Label"
+    },
+    "Value": {
+        "GoldValue",
+        "IsSellable"
+    }
+}
