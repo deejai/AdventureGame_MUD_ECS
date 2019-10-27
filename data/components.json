@@ -1,4 +1,8 @@
 {
+    "ArgumentType": {
+        "Label": "type_ShortString",
+        "Name": "type_MediumString"
+    },
     "Attributes": {
         "Strength": "int",
         "Agility": "int",
@@ -6,20 +10,20 @@
         "NaturalDamage": "int"
     },
     "Blessing": {
-        "Label": "type_mediumString",
-        "Name": "type_longString",
-        "Description": "type_shortString"
+        "Label": "type_ShortString",
+        "Name": "type_MediumString",
+        "Description": "type_LongString"
     },
     "Category": {
-        "Label": "type_mediumString",
-        "Name": "type_longString",
-        "Description": "type_shortString"
+        "Label": "type_ShortString",
+        "Name": "type_MediumString",
+        "Description": "type_LongString"
     },
     "CategoryList": {},
     "CombatEffect": {
-        "Label": "type_mediumString",
-        "Name": "type_longString",
-        "Description": "type_shortString",
+        "Label": "type_ShortString",
+        "Name": "type_MediumString",
+        "Description": "type_LongString",
         "Value": "int"
     },
     "CombatEffectList": {},
@@ -27,89 +31,100 @@
     "ContainerSlot": {
         "DropsOnDeath": "bit",
         "IsInInventory": "bit",
-        "ItemId": "fk_component_data_id"
+        "ItemId": "fk_component_data_item_id"
     },
     "Description": {
-        "Description",
-        "Name",
-        "UnidentifiedDescription",
-        "UnidentifiedName"
+        "Name": "type_MediumString",
+        "Description": "type_LongString",
+        "UnidentifiedName": "type_MediumString",
+        "UnidentifiedDescription": "type_LongString"
+    },
+    "DestinationType": {
+        "Label": "type_ShortString",
+        "Name": "type_MediumString"
     },
     "Disposition": {
-        "CategoryTagId": "fk_component_data_id",
-        "DispositionValue"
+        "CategoryTagId": "fk_component_data_category_id",
+        "DispositionValue": "int"
     },
     "DispositionList": {},
     "EquipProperties": {
-        "AgilityModifier",
-        "EquipSlot",
-        "IntelligenceModifier",
-        "StrengthModifier"
+        "AgilityModifier": "int",
+        "IntelligenceModifier": "int",
+        "StrengthModifier": "int",
+        "EquipSlot": "fk_component_data_equip_slot_id"
     },
-    "EquipSlots": {
-        "Arms",
-        "Chest",
-        "Hand",
-        "Head",
-        "Legs",
-        "MainHand",
-        "OffHand",
-        "Trinket"
+    "Equipped": {
+        "Arms": "fk_component_data_equipment_id",
+        "Chest": "fk_component_data_equipment_id",
+        "Hand": "fk_component_data_equipment_id",
+        "Head": "fk_component_data_equipment_id",
+        "Legs": "fk_component_data_equipment_id",
+        "MainHand": "fk_component_data_equipment_id",
+        "OffHand": "fk_component_data_equipment_id",
+        "Trinket": "fk_component_data_equipment_id"
     },
     "GlobalCondition": {
-        "Active",
-        "Description",
-        "Label",
-        "Name"
+        "Label": "type_ShortString",
+        "Name": "type_MediumString",
+        "Description": "type_LongString",
+        "Active": "bit"
     },
     "GlobalConditionList": {},
     "GoTo": {
-        "DestinationId",
-        "DestinationType"
+        "DestinationId": "int",
+        "DestinationType": "fk_component_data_destination_type_id"
     },
     "Health": {
-        "Current",
-        "Max",
-        "OverhealMax"
+        "Current": "int",
+        "Max": "int",
+        "OverhealMax": "int"
     },
     "Prompt": {
-        "Text"
+        "Text": "type_LongString"
     },
     "Response": {
-        "FollowUpText",
-        "GoTo",
-        "OptionText",
-        "Trigger"
+        "OptionText": "type_MediumString",
+        "FollowUpText": "type_LongString",
+        "GoTo": "fk_component_data_goto_id",
+        "Trigger": "fk_component_data_trigger_id"
     },
     "ResponseList": {},
     "SpellProperties": {
-        "CombatEffectList",
-        "Duration",
-        "Level",
-        "TargetType"
+        "CombatEffectList": "fk_component_data_combateffectlist_id",
+        "Duration": "int",
+        "Level": "fk_component_data_spell_level_id",
+        "TargetType": "fk_component_data_target_type_id"
+    },
+    "SpellLevel": {
+        "Value": "int"
     },
     "Status": {
-        "Description",
-        "Duration",
-        "Label",
-        "Name",
-        "Value"
+        "Label": "type_ShortString",
+        "Name": "type_MediumString",
+        "Description": "type_LongString",
+        "Duration": "int",
+        "Value": "int"
     },
     "StatusList": {},
+    "TargetType": {
+        "Label": "type_ShortString",
+        "Name": "type_MediumString"
+    },
     "TransitionProperties": {
-        "GlobalConditionId",
-        "GoTo",
-        "ListPriority",
-        "WhereText"
+        "GlobalConditionId": "fk_component_data_global_condition_id",
+        "GoTo": "fk_component_data_goto_id",
+        "ListPriority": "int",
+        "WhereText": "type_MediumString"
     },
     "Trigger": {
-        "Argument",
-        "ArgumentType",
-        "Description",
-        "Label"
+        "Label": "type_ShortString",
+        "Description": "type_LongString",
+        "ArgumentType": "fk_component_data_trigger_argument_type_id",
+        "Argument": "type_ShortString"
     },
     "Value": {
-        "GoldValue",
-        "IsSellable"
+        "GoldValue": "int",
+        "IsSellable": "bit"
     }
 }
