@@ -10,10 +10,10 @@ def init_path():
 def generate_component_data_tables():
     with open(__component_data_file_path) as input_file:
         data = json.load(input_file)
-        for thing in data:
-            print(thing)
-            for smaller_thing in data[thing]:
-                print(f"\t{smaller_thing}: {data[thing][smaller_thing]}")
+        for component in data:
+            print(component)
+            for component_data in data[component]:
+                print(f"\t{component_data}: {data[component][component_data]}")
             print()
 
 def main():
