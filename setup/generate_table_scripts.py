@@ -33,26 +33,28 @@ def create_table_script(table_name, variables_json):
         variable_declaration_string = f"{variable_name} {variable_type} not null"
         variable_declaration_strings.append(variable_declaration_string)
 
-    cu.dedent_strip(f'''
-        USE [{database_name}]
-        GO
+        variable_declarations_block = ",\n\t".join(variable_declaration_strings)
 
-        SET ANSI_NULLS ON
-        GO
+        cu.dedent_strip(f'''
+            USE [{database_name}]
+            GO
 
-        SET QUOTED_IDENTIFIER ON
-        GO
+            SET ANSI_NULLS ON
+            GO
 
-        CREATE TABLE [dbo].[ComponentData_{table_name}](
-            [component_data_{table_name_snake_case}_id] [int] IDENTITY(1,1) NOT NULL,
+            SET QUOTED_IDENTIFIER ON
+            GO
 
-            {",\n\t".join(variable_declaration_strings)}
+            CREATE TABLE [dbo].[ComponentData_{table_name}](
+                [component_data_{table_name_snake_case}_id] [int] IDENTITY(1,1) NOT NULL,
 
-        CONSTRAINT [PK_ComponentData_{table_name}_component_data_{table_name_snake_case}_id] PRIMARY KEY CLUSTERED 
-        (
-            [component_data_{table_name_snake_case}_id] ASC
-        )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-        ) ON [PRIMARY]
-        GO
-        '''
-    )
+                {}
+
+            CONSTRAINT [PK_ComponentData_{table_name}_component_data_{table_name_snake_case}_id] PRIMARY KEY CLUSTERED 
+            (
+                [component_data_{table_name_snake_case}_id] ASC
+            )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+            ) ON [PRIMARY]
+            GO
+            '''
+        )
