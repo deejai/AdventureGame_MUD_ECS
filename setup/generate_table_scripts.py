@@ -1,7 +1,7 @@
 import json
 import os
 
-from textwrap import dedent
+from textwrap import dedent, indent
 
 from root_dir import ROOT_DIR
 import custom_utilities as cu
@@ -22,15 +22,28 @@ def generate_component_data_tables():
 def create_table_script(table_name, variables_json):
     table_name_snake_case = cu.camel_to_snake_case(table_name)
     variable_declaration_strings = []
+    foreign_key_alters = []
 
     for variable_name in variables_json:
         variable_type = variables_json[variable_name]
         variable_declaration_string = f"{variable_name} {variable_type} not null"
         variable_declaration_strings.append(variable_declaration_string)
 
-    variable_declarations_block = ",\n\t\t".join(variable_declaration_strings)
+        if(variable_type[0:18] == "fk_component_data_"):
+            foreign_variable_name = variable_type[3:]
+            foreign_table_name = cu.snake_to_camel_case(variable_type[len("fk_component_data_"):len(variable_type)-len("_id")])
+            foreign_key_alter = dedent(f'''
+                ALTER TABLE [dbo].[ComponentData_{table_name}] WITH CHECK ADD CONSTRAINT [FK_Entity_ComponentData_{table_name}_{variable_name}] FOREIGN KEY([{variable_name}])
+                REFERENCES [dbo].[ComponentData_{foreign_table_name}] ([{foreign_variable_name}])
+                ON DELETE CASCADE
+                GO''')
+            foreign_key_alters.append(foreign_key_alter)
 
-    table_script = cu.dedent_strip(f'''
+    indent_str = "    "
+    variable_declarations_block = f"\n{indent_str}{indent_str}{indent_str}".join(variable_declaration_strings)
+    foreign_key_alters_block = f"\n{indent_str}{indent_str}".join([indent(s, f"{indent_str}{indent_str}") for s in foreign_key_alters])
+
+    table_script = dedent(f'''
         USE [{database_name}]
         GO
 
@@ -51,7 +64,8 @@ def create_table_script(table_name, variables_json):
         )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
         ) ON [PRIMARY]
         GO
-        '''
+
+        {foreign_key_alters_block}'''
     )
 
     return table_script
