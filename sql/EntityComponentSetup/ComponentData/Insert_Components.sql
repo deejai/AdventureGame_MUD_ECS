@@ -26,4 +26,22 @@ values
 ('GlobalConditionList', 'A list of global conditions', 'ComponentData_GlobalConditionList'),
 ('GlobalCondition', 'A globally accessable boolean', 'ComponentData_GlobalCondition'),
 ('EquipProperties', 'Where does this equip? How does it affect the equipped?', 'ComponentData_EquipProperties'),
-('EquipSlots', 'What is equipped to this entity?', 'ComponentData_EquipSlots')
+('Equipped', 'What is equipped to this entity?', 'ComponentData_EquipSlots')
+
+ArgumentType
+DestinationType
+
+Disposition
+DispositionList
+EquipSlot
+EquipProperties
+TriggerArgumentType
+Response
+ResponseList
+SpellLevel
+TargetType
+SpellProperties
+Status
+StatusList
+TransitionProperties
+Value

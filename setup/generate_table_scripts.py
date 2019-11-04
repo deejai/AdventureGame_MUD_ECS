@@ -33,9 +33,9 @@ def __add_table_script_with_dependencies(table_scripts, component, data):
         variable_type = variables_json[variable_name]
         if(is_foreign_key_for_component(variable_type)):
             foreign_component = cu.snake_to_camel_case(variable_type[len("fk_component_data_"):len(variable_type)-len("_id")])
-            print(f"{component} depends on {foreign_component}")
+            # print(f"{component} depends on {foreign_component}")
             if(__component_exists(table_scripts, foreign_component) == False):
-                print(f"Have to add {foreign_component} before {component}")
+                # print(f"Have to add {foreign_component} before {component}")
                 __add_table_script_with_dependencies(table_scripts, foreign_component, data)
 
     table_script = __create_table_script(component, variables_json)
@@ -50,7 +50,7 @@ def is_foreign_key_for_component(variable_type):
     return variable_type[0:18] == "fk_component_data_"
 
 def __create_table_script(table_name, variables_json):
-    print(f"Adding {table_name}")
+    # print(f"Adding {table_name}")
     table_name_snake_case = cu.camel_to_snake_case(table_name)
     variable_declaration_strings = []
     foreign_key_alters = []
