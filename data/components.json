@@ -31,7 +31,7 @@
     "ContainerSlot": {
         "DropsOnDeath": "bit",
         "IsInInventory": "bit",
-        "ItemId": "fk_component_data_item_id"
+        "ItemId": "fk_entity_data_item_id"
     },
     "Description": {
         "Name": "type_MediumString",
@@ -55,14 +55,17 @@
         "EquipSlot": "fk_component_data_equip_slot_id"
     },
     "Equipped": {
-        "Arms": "fk_component_data_equipment_id",
-        "Chest": "fk_component_data_equipment_id",
-        "Hand": "fk_component_data_equipment_id",
-        "Head": "fk_component_data_equipment_id",
-        "Legs": "fk_component_data_equipment_id",
-        "MainHand": "fk_component_data_equipment_id",
-        "OffHand": "fk_component_data_equipment_id",
-        "Trinket": "fk_component_data_equipment_id"
+        "Arms": "fk_entity_data_equipment_id",
+        "Chest": "fk_entity_data_equipment_id",
+        "Hand": "fk_entity_data_equipment_id",
+        "Head": "fk_entity_data_equipment_id",
+        "Legs": "fk_entity_data_equipment_id",
+        "MainHand": "fk_entity_data_equipment_id",
+        "OffHand": "fk_entity_data_equipment_id",
+        "Trinket": "fk_entity_data_equipment_id"
+    },
+    "EquipSlot": {
+        "SlotName": "type_ShortString"
     },
     "GlobalCondition": {
         "Label": "type_ShortString",
@@ -86,12 +89,12 @@
     "Response": {
         "OptionText": "type_MediumString",
         "FollowUpText": "type_LongString",
-        "GoTo": "fk_component_data_goto_id",
+        "GoTo": "fk_component_data_go_to_id",
         "Trigger": "fk_component_data_trigger_id"
     },
     "ResponseList": {},
     "SpellProperties": {
-        "CombatEffectList": "fk_component_data_combateffectlist_id",
+        "CombatEffectList": "fk_component_data_combat_effect_list_id",
         "Duration": "int",
         "Level": "fk_component_data_spell_level_id",
         "TargetType": "fk_component_data_target_type_id"
@@ -113,7 +116,7 @@
     },
     "TransitionProperties": {
         "GlobalConditionId": "fk_component_data_global_condition_id",
-        "GoTo": "fk_component_data_goto_id",
+        "GoTo": "fk_component_data_go_to_id",
         "ListPriority": "int",
         "WhereText": "type_MediumString"
     },
@@ -122,6 +125,10 @@
         "Description": "type_LongString",
         "ArgumentType": "fk_component_data_trigger_argument_type_id",
         "Argument": "type_ShortString"
+    },
+    "TriggerArgumentType": {
+        "Label": "type_shortString",
+        "Description":"type_LongString"
     },
     "Value": {
         "GoldValue": "int",
