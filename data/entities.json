@@ -1,0 +1,93 @@
+{
+    "Item": {
+        "metadata": {
+            "Description": "Something that can be put in a slot"
+        },
+        "Components": [
+            "Description",
+            "Value"
+        ]
+    },
+    "Equipment": {
+        "metadata": {
+            "Description": ""
+        },
+        "Components": [
+            "Description",
+            "Value",
+            "EquipProperties"
+        ]
+    },
+    "Player": {
+        "metadata": {
+            "Description": ""
+        },
+        "Components": [
+            
+        ]
+    },
+    "NPC": {
+        "metadata": {
+            "Description": ""
+        },
+        "Components": [
+            
+        ]
+    },
+    "Room": {
+        "metadata": {
+            "Description": ""
+        },
+        "Components": [
+            
+        ]
+    },
+    "Combat": {
+        "metadata": {
+            "Description": ""
+        },
+        "Components": [
+            
+        ]
+    },
+    "DialogueState": {
+        "metadata": {
+            "Description": ""
+        },
+        "Components": [
+            
+        ]
+    },
+    "Response": {
+        "metadata": {
+            "Description": ""
+        },
+        "Components": [
+            
+        ]
+    },
+    "Transition": {
+        "metadata": {
+            "Description": ""
+        },
+        "Components": [
+            
+        ]
+    },
+    "Spell": {
+        "metadata": {
+            "Description": ""
+        },
+        "Components": [
+            
+        ]
+    },
+    "Container": {
+        "metadata": {
+            "Description": "Something that holds items"
+        },
+        "Components": [
+            "ContainerSlotList"
+        ]
+    }
+}
