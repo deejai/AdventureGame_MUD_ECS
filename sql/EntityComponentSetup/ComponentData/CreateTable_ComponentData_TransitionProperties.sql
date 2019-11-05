@@ -10,8 +10,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[ComponentData_TransitionProperties](
-    [component_data_transition_properties_id] [int] IDENTITY(1,1) NOT NULL,
 
+    [component_data_transition_properties_id] [int] IDENTITY(1,1) NOT NULL,
     [GlobalConditionId] [fk_component_data_global_condition_id] not null,
     [GoTo] [fk_component_data_go_to_id] not null,
     [ListPriority] [int] not null,

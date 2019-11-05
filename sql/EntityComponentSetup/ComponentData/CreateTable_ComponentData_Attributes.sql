@@ -10,8 +10,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[ComponentData_Attributes](
-    [component_data_attributes_id] [int] IDENTITY(1,1) NOT NULL,
 
+    [component_data_attributes_id] [int] IDENTITY(1,1) NOT NULL,
     [Strength] [int] not null,
     [Agility] [int] not null,
     [Intelligence] [int] not null,

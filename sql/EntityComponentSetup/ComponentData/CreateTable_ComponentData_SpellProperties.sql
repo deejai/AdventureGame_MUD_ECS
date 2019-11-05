@@ -10,8 +10,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[ComponentData_SpellProperties](
-    [component_data_spell_properties_id] [int] IDENTITY(1,1) NOT NULL,
 
+    [component_data_spell_properties_id] [int] IDENTITY(1,1) NOT NULL,
     [CombatEffectList] [fk_component_data_combat_effect_list_id] not null,
     [Duration] [int] not null,
     [SpellLevel] [int] not null,

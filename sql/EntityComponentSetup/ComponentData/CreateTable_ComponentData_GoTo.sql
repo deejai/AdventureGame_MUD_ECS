@@ -10,8 +10,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[ComponentData_GoTo](
-    [component_data_go_to_id] [int] IDENTITY(1,1) NOT NULL,
 
+    [component_data_go_to_id] [int] IDENTITY(1,1) NOT NULL,
     [DestinationId] [int] not null,
     [DestinationType] [fk_component_data_destination_type_id] not null
 

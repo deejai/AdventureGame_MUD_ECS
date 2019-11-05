@@ -10,8 +10,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[ComponentData_Health](
-    [component_data_health_id] [int] IDENTITY(1,1) NOT NULL,
 
+    [component_data_health_id] [int] IDENTITY(1,1) NOT NULL,
     [Current] [int] not null,
     [Max] [int] not null,
     [OverhealMax] [int] not null

@@ -10,9 +10,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[ComponentData_StatusList](
-    [component_data_status_list_id] [int] IDENTITY(1,1) NOT NULL,
 
-
+    [component_data_status_list_id] [int] IDENTITY(1,1) NOT NULL
 
 CONSTRAINT [PK_ComponentData_StatusList_component_data_status_list_id] PRIMARY KEY CLUSTERED
 (

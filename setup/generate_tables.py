@@ -63,7 +63,7 @@ def is_foreign_key_for_component(variable_type):
 def __create_table_script(table_name, variables_json):
     # print(f"Adding {table_name}")
     table_name_snake_case = cu.camel_to_snake_case(table_name)
-    variable_declaration_strings = []
+    variable_declaration_strings = [f"[component_data_{table_name_snake_case}_id] [int] IDENTITY(1,1) NOT NULL"]
     foreign_key_alters = []
 
     for variable_name in variables_json:
@@ -96,7 +96,6 @@ def __create_table_script(table_name, variables_json):
         GO
 
         CREATE TABLE [dbo].[ComponentData_{table_name}](
-            [component_data_{table_name_snake_case}_id] [int] IDENTITY(1,1) NOT NULL,
 
             {variable_declarations_block}
 

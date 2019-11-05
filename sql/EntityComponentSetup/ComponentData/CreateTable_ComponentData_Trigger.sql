@@ -10,8 +10,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[ComponentData_Trigger](
-    [component_data_trigger_id] [int] IDENTITY(1,1) NOT NULL,
 
+    [component_data_trigger_id] [int] IDENTITY(1,1) NOT NULL,
     [Label] [type_ShortString] not null,
     [Description] [type_LongString] not null,
     [ArgumentType] [fk_component_data_argument_type_id] not null,
