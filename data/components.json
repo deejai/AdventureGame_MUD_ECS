@@ -131,7 +131,8 @@
             "AgilityModifier": "int",
             "IntelligenceModifier": "int",
             "StrengthModifier": "int",
-            "EquipSlot": "type_ShortString"
+            "EquipSlot": "type_ShortString",
+            "Synergy": "fk_component_data_synergy_id"
         }
     },
     "Equipped": {
@@ -238,6 +239,16 @@
             "Description": "List of statuses"
         },
         "variables": {}
+    },
+    "Synergy": {
+        "metadata": {
+            "Description": "What does this synergize with"
+        },
+        "variables": {
+            "Label": "type_ShortString",
+            "Name": "type_MediumString",
+            "Description": "type_LongString"
+        }
     },
     "TargetType": {
         "metadata": {
