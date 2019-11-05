@@ -41,7 +41,7 @@ def __add_table_script_with_dependencies(table_scripts, component, data):
     variables_json = data[component]["variables"]
     for variable_name in variables_json:
         variable_type = variables_json[variable_name]
-        if(is_foreign_key_for_component(variable_type)):
+        if(__is_foreign_key_for_component(variable_type)):
             foreign_component = cu.snake_to_camel_case(variable_type[len("fk_component_data_"):len(variable_type)-len("_id")])
             # {component} depends on {foreign_component}
             if(__component_exists(table_scripts, foreign_component) == False):
@@ -57,11 +57,10 @@ def __add_table_script_with_dependencies(table_scripts, component, data):
 
     return table_scripts
 
-def is_foreign_key_for_component(variable_type):
+def __is_foreign_key_for_component(variable_type):
     return variable_type[0:18] == "fk_component_data_"
 
 def __create_table_script(table_name, variables_json):
-    # print(f"Adding {table_name}")
     table_name_snake_case = cu.camel_to_snake_case(table_name)
     variable_declaration_strings = [f"[component_data_{table_name_snake_case}_id] [int] IDENTITY(1,1) NOT NULL"]
     foreign_key_alters = []
@@ -71,7 +70,7 @@ def __create_table_script(table_name, variables_json):
         variable_declaration_string = f"[{variable_name}] [{variable_type}] not null"
         variable_declaration_strings.append(variable_declaration_string)
 
-        if(is_foreign_key_for_component(variable_type)):
+        if(__is_foreign_key_for_component(variable_type)):
             foreign_variable_name = variable_type[3:]
             foreign_table_name = cu.snake_to_camel_case(variable_type[len("fk_component_data_"):len(variable_type)-len("_id")])
             foreign_key_alter = dedent(f'''
@@ -82,7 +81,7 @@ def __create_table_script(table_name, variables_json):
             foreign_key_alters.append(foreign_key_alter)
 
     indent_str = "    "
-    variable_declarations_block = f",\n{indent_str}{indent_str}{indent_str}".join(variable_declaration_strings) + ","
+    variable_declarations_block = f",\n{indent_str}{indent_str}{indent_str}".join(variable_declaration_strings[]) + ","
     foreign_key_alters_block = f"\n{indent_str}{indent_str}".join([indent(s, f"{indent_str}{indent_str}") for s in foreign_key_alters])
 
     table_script = dedent(f'''
