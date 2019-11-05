@@ -1,7 +1,8 @@
 {
     "ArgumentType": {
         "Label": "type_ShortString",
-        "Name": "type_MediumString"
+        "Name": "type_MediumString",
+        "Description": "type_LongString"
     },
     "Attributes": {
         "Strength": "int",
@@ -52,7 +53,7 @@
         "AgilityModifier": "int",
         "IntelligenceModifier": "int",
         "StrengthModifier": "int",
-        "EquipSlot": "fk_component_data_equip_slot_id"
+        "EquipSlot": "type_ShortString"
     },
     "Equipped": {
         "Arms": "fk_entity_data_equipment_id",
@@ -63,9 +64,6 @@
         "MainHand": "fk_entity_data_equipment_id",
         "OffHand": "fk_entity_data_equipment_id",
         "Trinket": "fk_entity_data_equipment_id"
-    },
-    "EquipSlot": {
-        "SlotName": "type_ShortString"
     },
     "GlobalCondition": {
         "Label": "type_ShortString",
@@ -96,11 +94,8 @@
     "SpellProperties": {
         "CombatEffectList": "fk_component_data_combat_effect_list_id",
         "Duration": "int",
-        "Level": "fk_component_data_spell_level_id",
+        "SpellLevel": "int",
         "TargetType": "fk_component_data_target_type_id"
-    },
-    "SpellLevel": {
-        "Value": "int"
     },
     "Status": {
         "Label": "type_ShortString",
@@ -123,12 +118,8 @@
     "Trigger": {
         "Label": "type_ShortString",
         "Description": "type_LongString",
-        "ArgumentType": "fk_component_data_trigger_argument_type_id",
+        "ArgumentType": "fk_component_data_argument_type_id",
         "Argument": "type_ShortString"
-    },
-    "TriggerArgumentType": {
-        "Label": "type_shortString",
-        "Description":"type_LongString"
     },
     "Value": {
         "GoldValue": "int",
