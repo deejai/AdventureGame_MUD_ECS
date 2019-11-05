@@ -270,6 +270,12 @@
             "Argument": "type_ShortString"
         }
     },
+    "TriggerList": {
+        "metadata": {
+            "Description": "List of triggers"
+        },
+        "variables": {}
+    },
     "Value": {
         "metadata": {
             "Description": "How much are others willing to pay for this?"
