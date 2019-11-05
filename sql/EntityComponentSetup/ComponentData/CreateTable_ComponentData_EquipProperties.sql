@@ -16,6 +16,7 @@ CREATE TABLE [dbo].[ComponentData_EquipProperties](
     [IntelligenceModifier] [int] not null,
     [StrengthModifier] [int] not null,
     [EquipSlot] [type_ShortString] not null,
+    [Synergy] [fk_component_data_synergy_id] not null,
 
 CONSTRAINT [PK_ComponentData_EquipProperties_component_data_equip_properties_id] PRIMARY KEY CLUSTERED
 (
@@ -24,3 +25,8 @@ CONSTRAINT [PK_ComponentData_EquipProperties_component_data_equip_properties_id]
 ) ON [PRIMARY]
 GO
 
+
+ALTER TABLE [dbo].[ComponentData_EquipProperties] WITH CHECK ADD CONSTRAINT [FK_Entity_ComponentData_EquipProperties_Synergy] FOREIGN KEY([Synergy])
+REFERENCES [dbo].[ComponentData_Synergy] ([component_data_synergy_id])
+ON DELETE CASCADE
+GO

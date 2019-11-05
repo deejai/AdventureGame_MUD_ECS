@@ -17,6 +17,7 @@ values
 ('DialogueStateProperties', 'Prompt and responses for this entity','ComponentData_DialogueStateProperties'),
 ('Disposition', 'How does this entity feel about others?','ComponentData_Disposition'),
 ('DispositionList', 'List of pairings of category tags and values','ComponentData_DispositionList'),
+('Synergy', 'What does this synergize with','ComponentData_Synergy'),
 ('EquipProperties', 'Where does this equip? How does it affect the equipped?','ComponentData_EquipProperties'),
 ('Equipped', 'What is equipped to this entity?','ComponentData_Equipped'),
 ('GlobalCondition', 'A global boolean that describes a property of this world','ComponentData_GlobalCondition'),
