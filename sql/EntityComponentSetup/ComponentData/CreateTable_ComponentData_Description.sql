@@ -15,7 +15,7 @@ CREATE TABLE [dbo].[ComponentData_Description](
     [Name] [type_MediumString] not null,
     [Description] [type_LongString] not null,
     [UnidentifiedName] [type_MediumString] not null,
-    [UnidentifiedDescription] [type_LongString] not null
+    [UnidentifiedDescription] [type_LongString] not null,
 
 CONSTRAINT [PK_ComponentData_Description_component_data_description_id] PRIMARY KEY CLUSTERED
 (

@@ -13,7 +13,7 @@ CREATE TABLE [dbo].[ComponentData_Disposition](
 
     [component_data_disposition_id] [int] IDENTITY(1,1) NOT NULL,
     [CategoryTagId] [fk_component_data_category_id] not null,
-    [DispositionValue] [int] not null
+    [DispositionValue] [int] not null,
 
 CONSTRAINT [PK_ComponentData_Disposition_component_data_disposition_id] PRIMARY KEY CLUSTERED
 (

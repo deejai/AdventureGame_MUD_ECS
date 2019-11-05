@@ -11,7 +11,7 @@ GO
 
 CREATE TABLE [dbo].[ComponentData_ContainerSlotList](
 
-    [component_data_container_slot_list_id] [int] IDENTITY(1,1) NOT NULL
+    [component_data_container_slot_list_id] [int] IDENTITY(1,1) NOT NULL,
 
 CONSTRAINT [PK_ComponentData_ContainerSlotList_component_data_container_slot_list_id] PRIMARY KEY CLUSTERED
 (

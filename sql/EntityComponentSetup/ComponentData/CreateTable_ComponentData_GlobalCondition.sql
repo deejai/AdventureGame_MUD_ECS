@@ -15,7 +15,7 @@ CREATE TABLE [dbo].[ComponentData_GlobalCondition](
     [Label] [type_ShortString] not null,
     [Name] [type_MediumString] not null,
     [Description] [type_LongString] not null,
-    [Active] [bit] not null
+    [Active] [bit] not null,
 
 CONSTRAINT [PK_ComponentData_GlobalCondition_component_data_global_condition_id] PRIMARY KEY CLUSTERED
 (

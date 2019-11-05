@@ -16,7 +16,7 @@ CREATE TABLE [dbo].[ComponentData_Status](
     [Name] [type_MediumString] not null,
     [Description] [type_LongString] not null,
     [Duration] [int] not null,
-    [Value] [int] not null
+    [Value] [int] not null,
 
 CONSTRAINT [PK_ComponentData_Status_component_data_status_id] PRIMARY KEY CLUSTERED
 (

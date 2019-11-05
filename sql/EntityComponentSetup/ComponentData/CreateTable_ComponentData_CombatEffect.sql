@@ -15,7 +15,7 @@ CREATE TABLE [dbo].[ComponentData_CombatEffect](
     [Label] [type_ShortString] not null,
     [Name] [type_MediumString] not null,
     [Description] [type_LongString] not null,
-    [Value] [int] not null
+    [Value] [int] not null,
 
 CONSTRAINT [PK_ComponentData_CombatEffect_component_data_combat_effect_id] PRIMARY KEY CLUSTERED
 (

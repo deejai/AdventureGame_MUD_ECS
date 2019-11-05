@@ -13,7 +13,7 @@ CREATE TABLE [dbo].[ComponentData_GoTo](
 
     [component_data_go_to_id] [int] IDENTITY(1,1) NOT NULL,
     [DestinationId] [int] not null,
-    [DestinationType] [fk_component_data_destination_type_id] not null
+    [DestinationType] [fk_component_data_destination_type_id] not null,
 
 CONSTRAINT [PK_ComponentData_GoTo_component_data_go_to_id] PRIMARY KEY CLUSTERED
 (

@@ -15,7 +15,7 @@ CREATE TABLE [dbo].[ComponentData_Response](
     [OptionText] [type_MediumString] not null,
     [FollowUpText] [type_LongString] not null,
     [GoTo] [fk_component_data_go_to_id] not null,
-    [Trigger] [fk_component_data_trigger_id] not null
+    [Trigger] [fk_component_data_trigger_id] not null,
 
 CONSTRAINT [PK_ComponentData_Response_component_data_response_id] PRIMARY KEY CLUSTERED
 (

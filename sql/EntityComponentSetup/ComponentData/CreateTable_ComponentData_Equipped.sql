@@ -19,7 +19,7 @@ CREATE TABLE [dbo].[ComponentData_Equipped](
     [Legs] [fk_entity_data_container_slot_id] not null,
     [MainHand] [fk_entity_data_container_slot_id] not null,
     [OffHand] [fk_entity_data_container_slot_id] not null,
-    [Trinket] [fk_entity_data_container_slot_id] not null
+    [Trinket] [fk_entity_data_container_slot_id] not null,
 
 CONSTRAINT [PK_ComponentData_Equipped_component_data_equipped_id] PRIMARY KEY CLUSTERED
 (

@@ -12,7 +12,7 @@ GO
 CREATE TABLE [dbo].[ComponentData_Prompt](
 
     [component_data_prompt_id] [int] IDENTITY(1,1) NOT NULL,
-    [Text] [type_LongString] not null
+    [Text] [type_LongString] not null,
 
 CONSTRAINT [PK_ComponentData_Prompt_component_data_prompt_id] PRIMARY KEY CLUSTERED
 (

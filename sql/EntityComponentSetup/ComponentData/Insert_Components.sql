@@ -30,4 +30,5 @@ values
 ('Status', 'An ongoing effect on this entity','ComponentData_Status'),
 ('StatusList', 'List of statuses','ComponentData_StatusList'),
 ('TransitionProperties', 'Where does this entity lead? How is it accessed?','ComponentData_TransitionProperties'),
+('TriggerList', 'List of triggers','ComponentData_TriggerList'),
 ('Value', 'How much are others willing to pay for this?','ComponentData_Value')

@@ -13,7 +13,7 @@ CREATE TABLE [dbo].[ComponentData_TargetType](
 
     [component_data_target_type_id] [int] IDENTITY(1,1) NOT NULL,
     [Label] [type_ShortString] not null,
-    [Name] [type_MediumString] not null
+    [Name] [type_MediumString] not null,
 
 CONSTRAINT [PK_ComponentData_TargetType_component_data_target_type_id] PRIMARY KEY CLUSTERED
 (

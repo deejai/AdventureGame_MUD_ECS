@@ -13,7 +13,7 @@ CREATE TABLE [dbo].[ComponentData_DialogueStateProperties](
 
     [component_data_dialogue_state_properties_id] [int] IDENTITY(1,1) NOT NULL,
     [Prompt] [fk_component_data_prompt_id] not null,
-    [Responses] [fk_component_data_response_list_id] not null
+    [Responses] [fk_component_data_response_list_id] not null,
 
 CONSTRAINT [PK_ComponentData_DialogueStateProperties_component_data_dialogue_state_properties_id] PRIMARY KEY CLUSTERED
 (

@@ -15,7 +15,7 @@ CREATE TABLE [dbo].[ComponentData_Trigger](
     [Label] [type_ShortString] not null,
     [Description] [type_LongString] not null,
     [ArgumentType] [fk_component_data_argument_type_id] not null,
-    [Argument] [type_ShortString] not null
+    [Argument] [type_ShortString] not null,
 
 CONSTRAINT [PK_ComponentData_Trigger_component_data_trigger_id] PRIMARY KEY CLUSTERED
 (

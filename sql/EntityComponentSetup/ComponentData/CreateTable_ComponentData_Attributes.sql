@@ -15,7 +15,7 @@ CREATE TABLE [dbo].[ComponentData_Attributes](
     [Strength] [int] not null,
     [Agility] [int] not null,
     [Intelligence] [int] not null,
-    [NaturalDamage] [int] not null
+    [NaturalDamage] [int] not null,
 
 CONSTRAINT [PK_ComponentData_Attributes_component_data_attributes_id] PRIMARY KEY CLUSTERED
 (

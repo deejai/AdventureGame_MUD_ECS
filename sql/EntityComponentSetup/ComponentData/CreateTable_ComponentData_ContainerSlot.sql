@@ -14,7 +14,7 @@ CREATE TABLE [dbo].[ComponentData_ContainerSlot](
     [component_data_container_slot_id] [int] IDENTITY(1,1) NOT NULL,
     [DropsOnDeath] [bit] not null,
     [EquipSlot] [type_ShortString] not null,
-    [ItemId] [fk_entity_data_item_id] not null
+    [ItemId] [fk_entity_data_item_id] not null,
 
 CONSTRAINT [PK_ComponentData_ContainerSlot_component_data_container_slot_id] PRIMARY KEY CLUSTERED
 (

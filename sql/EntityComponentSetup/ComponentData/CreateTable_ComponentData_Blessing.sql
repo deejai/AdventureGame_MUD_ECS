@@ -14,7 +14,7 @@ CREATE TABLE [dbo].[ComponentData_Blessing](
     [component_data_blessing_id] [int] IDENTITY(1,1) NOT NULL,
     [Label] [type_ShortString] not null,
     [Name] [type_MediumString] not null,
-    [Description] [type_LongString] not null
+    [Description] [type_LongString] not null,
 
 CONSTRAINT [PK_ComponentData_Blessing_component_data_blessing_id] PRIMARY KEY CLUSTERED
 (

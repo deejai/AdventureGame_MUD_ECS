@@ -15,7 +15,7 @@ CREATE TABLE [dbo].[ComponentData_SpellProperties](
     [CombatEffectList] [fk_component_data_combat_effect_list_id] not null,
     [Duration] [int] not null,
     [SpellLevel] [int] not null,
-    [TargetType] [fk_component_data_target_type_id] not null
+    [TargetType] [fk_component_data_target_type_id] not null,
 
 CONSTRAINT [PK_ComponentData_SpellProperties_component_data_spell_properties_id] PRIMARY KEY CLUSTERED
 (

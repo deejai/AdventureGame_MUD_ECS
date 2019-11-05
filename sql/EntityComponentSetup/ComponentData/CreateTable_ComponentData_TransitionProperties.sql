@@ -15,7 +15,7 @@ CREATE TABLE [dbo].[ComponentData_TransitionProperties](
     [GlobalConditionId] [fk_component_data_global_condition_id] not null,
     [GoTo] [fk_component_data_go_to_id] not null,
     [ListPriority] [int] not null,
-    [WhereText] [type_MediumString] not null
+    [WhereText] [type_MediumString] not null,
 
 CONSTRAINT [PK_ComponentData_TransitionProperties_component_data_transition_properties_id] PRIMARY KEY CLUSTERED
 (

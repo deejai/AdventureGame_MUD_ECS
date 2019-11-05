@@ -15,7 +15,7 @@ CREATE TABLE [dbo].[ComponentData_EquipProperties](
     [AgilityModifier] [int] not null,
     [IntelligenceModifier] [int] not null,
     [StrengthModifier] [int] not null,
-    [EquipSlot] [type_ShortString] not null
+    [EquipSlot] [type_ShortString] not null,
 
 CONSTRAINT [PK_ComponentData_EquipProperties_component_data_equip_properties_id] PRIMARY KEY CLUSTERED
 (

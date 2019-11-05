@@ -82,7 +82,7 @@ def __create_table_script(table_name, variables_json):
             foreign_key_alters.append(foreign_key_alter)
 
     indent_str = "    "
-    variable_declarations_block = f",\n{indent_str}{indent_str}{indent_str}".join(variable_declaration_strings)
+    variable_declarations_block = f",\n{indent_str}{indent_str}{indent_str}".join(variable_declaration_strings) + ","
     foreign_key_alters_block = f"\n{indent_str}{indent_str}".join([indent(s, f"{indent_str}{indent_str}") for s in foreign_key_alters])
 
     table_script = dedent(f'''

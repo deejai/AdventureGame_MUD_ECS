@@ -11,7 +11,7 @@ GO
 
 CREATE TABLE [dbo].[ComponentData_ResponseList](
 
-    [component_data_response_list_id] [int] IDENTITY(1,1) NOT NULL
+    [component_data_response_list_id] [int] IDENTITY(1,1) NOT NULL,
 
 CONSTRAINT [PK_ComponentData_ResponseList_component_data_response_list_id] PRIMARY KEY CLUSTERED
 (

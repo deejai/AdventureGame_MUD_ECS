@@ -13,7 +13,7 @@ CREATE TABLE [dbo].[ComponentData_Value](
 
     [component_data_value_id] [int] IDENTITY(1,1) NOT NULL,
     [GoldValue] [int] not null,
-    [IsSellable] [bit] not null
+    [IsSellable] [bit] not null,
 
 CONSTRAINT [PK_ComponentData_Value_component_data_value_id] PRIMARY KEY CLUSTERED
 (
