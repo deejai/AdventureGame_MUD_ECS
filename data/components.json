@@ -1,128 +1,282 @@
 {
     "ArgumentType": {
-        "Label": "type_ShortString",
-        "Name": "type_MediumString",
-        "Description": "type_LongString"
+        "metadata": {
+            "Description": "Basic descriptive strings"
+        },
+        "variables": {
+            "Label": "type_ShortString",
+            "Name": "type_MediumString",
+            "Description": "type_LongString"
+        }
     },
     "Attributes": {
-        "Strength": "int",
-        "Agility": "int",
-        "Intelligence": "int",
-        "NaturalDamage": "int"
+        "metadata": {
+            "Description": "Basic character attributes"
+        },
+        "variables": {
+            "Strength": "int",
+            "Agility": "int",
+            "Intelligence": "int",
+            "NaturalDamage": "int"
+        }
     },
     "Blessing": {
-        "Label": "type_ShortString",
-        "Name": "type_MediumString",
-        "Description": "type_LongString"
+        "metadata": {
+            "Description": "A gift from the Gods"
+        },
+        "variables": {
+            "Label": "type_ShortString",
+            "Name": "type_MediumString",
+            "Description": "type_LongString"
+        }
     },
     "Category": {
-        "Label": "type_ShortString",
-        "Name": "type_MediumString",
-        "Description": "type_LongString"
+        "metadata": {
+            "Description": "A category that this entity fits into"
+        },
+        "variables": {
+            "Label": "type_ShortString",
+            "Name": "type_MediumString",
+            "Description": "type_LongString"
+        }
     },
-    "CategoryList": {},
+    "CategoryList": {
+        "metadata": {
+            "Description": "List of disposition tags associated with this entity"
+        },
+        "variables": {}
+    },
     "CombatEffect": {
-        "Label": "type_ShortString",
-        "Name": "type_MediumString",
-        "Description": "type_LongString",
-        "Value": "int"
+        "metadata": {
+            "Description": "An effect that changes combat"
+        },
+        "variables": {
+            "Label": "type_ShortString",
+            "Name": "type_MediumString",
+            "Description": "type_LongString",
+            "Value": "int"
+        }
     },
-    "CombatEffectList": {},
-    "ContainerList": {},
+    "CombatEffectList": {
+        "metadata": {
+            "Description": "List of combat effects"
+        },
+        "variables": {}
+    },
+    "ContainerSlotList": {
+        "metadata": {
+            "Description": "List of containers"
+        },
+        "variables": {}
+    },
     "ContainerSlot": {
-        "DropsOnDeath": "bit",
-        "IsInInventory": "bit",
-        "ItemId": "fk_entity_data_item_id"
+        "metadata": {
+            "Description": "A slot for an item"
+        },
+        "variables": {
+            "DropsOnDeath": "bit",
+            "EquipSlot": "type_ShortString",
+            "ItemId": "fk_entity_data_item_id"
+        }
     },
     "Description": {
-        "Name": "type_MediumString",
-        "Description": "type_LongString",
-        "UnidentifiedName": "type_MediumString",
-        "UnidentifiedDescription": "type_LongString"
+        "metadata": {
+            "Description": "Basic descriptive strings"
+        },
+        "variables": {
+            "Name": "type_MediumString",
+            "Description": "type_LongString",
+            "UnidentifiedName": "type_MediumString",
+            "UnidentifiedDescription": "type_LongString"
+        }
     },
     "DestinationType": {
-        "Label": "type_ShortString",
-        "Name": "type_MediumString"
+        "metadata": {
+            "Description": "What type of destination does this have?"
+        },
+        "variables": {
+            "Label": "type_ShortString",
+            "Name": "type_MediumString"
+        }
+    },
+    "DialogueStateProperties": {
+        "metadata": {
+            "Description": "Prompt and responses for this entity"
+        },
+        "variables": {
+            "Prompt": "fk_component_data_prompt_id",
+            "Responses": "fk_component_data_response_list_id"
+        }
     },
     "Disposition": {
-        "CategoryTagId": "fk_component_data_category_id",
-        "DispositionValue": "int"
+        "metadata": {
+            "Description": "How does this entity feel about others?"
+        },
+        "variables": {
+            "CategoryTagId": "fk_component_data_category_id",
+            "DispositionValue": "int"
+        }
     },
-    "DispositionList": {},
+    "DispositionList": {
+        "metadata": {
+            "Description": "List of pairings of category tags and values"
+        },
+        "variables": {}
+    },
     "EquipProperties": {
-        "AgilityModifier": "int",
-        "IntelligenceModifier": "int",
-        "StrengthModifier": "int",
-        "EquipSlot": "type_ShortString"
+        "metadata": {
+            "Description": "Where does this equip? How does it affect the equipped?"
+        },
+        "variables": {
+            "AgilityModifier": "int",
+            "IntelligenceModifier": "int",
+            "StrengthModifier": "int",
+            "EquipSlot": "type_ShortString"
+        }
     },
     "Equipped": {
-        "Arms": "fk_entity_data_equipment_id",
-        "Chest": "fk_entity_data_equipment_id",
-        "Hand": "fk_entity_data_equipment_id",
-        "Head": "fk_entity_data_equipment_id",
-        "Legs": "fk_entity_data_equipment_id",
-        "MainHand": "fk_entity_data_equipment_id",
-        "OffHand": "fk_entity_data_equipment_id",
-        "Trinket": "fk_entity_data_equipment_id"
+        "metadata": {
+            "Description": "What is equipped to this entity?"
+        },
+        "variables": {
+            "Arms": "fk_entity_data_container_slot_id",
+            "Chest": "fk_entity_data_container_slot_id",
+            "Hand": "fk_entity_data_container_slot_id",
+            "Head": "fk_entity_data_container_slot_id",
+            "Legs": "fk_entity_data_container_slot_id",
+            "MainHand": "fk_entity_data_container_slot_id",
+            "OffHand": "fk_entity_data_container_slot_id",
+            "Trinket": "fk_entity_data_container_slot_id"
+        }
     },
     "GlobalCondition": {
-        "Label": "type_ShortString",
-        "Name": "type_MediumString",
-        "Description": "type_LongString",
-        "Active": "bit"
+        "metadata": {
+            "Description": "A global boolean that describes a property of this world"
+        },
+        "variables": {
+            "Label": "type_ShortString",
+            "Name": "type_MediumString",
+            "Description": "type_LongString",
+            "Active": "bit"
+        }
     },
-    "GlobalConditionList": {},
+    "GlobalConditionList": {
+        "metadata": {
+            "Description": "List of global conditions"
+        },
+        "variables": {}
+    },
     "GoTo": {
-        "DestinationId": "int",
-        "DestinationType": "fk_component_data_destination_type_id"
+        "metadata": {
+            "Description": "A destination environment', 'ComponentData_GoTo"
+        },
+        "variables": {
+            "DestinationId": "int",
+            "DestinationType": "fk_component_data_destination_type_id"
+        }
     },
     "Health": {
-        "Current": "int",
-        "Max": "int",
-        "OverhealMax": "int"
+        "metadata": {
+            "Description": "Max and current health properties"
+        },
+        "variables": {
+            "Current": "int",
+            "Max": "int",
+            "OverhealMax": "int"
+        }
     },
     "Prompt": {
-        "Text": "type_LongString"
+        "metadata": {
+            "Description": "Text to display to the player"
+        },
+        "variables": {
+            "Text": "type_LongString"
+        }
     },
     "Response": {
-        "OptionText": "type_MediumString",
-        "FollowUpText": "type_LongString",
-        "GoTo": "fk_component_data_go_to_id",
-        "Trigger": "fk_component_data_trigger_id"
+        "metadata": {
+            "Description": "A single response choice"
+        },
+        "variables": {
+            "OptionText": "type_MediumString",
+            "FollowUpText": "type_LongString",
+            "GoTo": "fk_component_data_go_to_id",
+            "Trigger": "fk_component_data_trigger_id"
+        }
     },
-    "ResponseList": {},
+    "ResponseList": {
+        "metadata": {
+            "Description": "List of responses"
+        },
+        "variables": {}
+    },
     "SpellProperties": {
-        "CombatEffectList": "fk_component_data_combat_effect_list_id",
-        "Duration": "int",
-        "SpellLevel": "int",
-        "TargetType": "fk_component_data_target_type_id"
+        "metadata": {
+            "Description": "How does this spell work?"
+        },
+        "variables": {
+            "CombatEffectList": "fk_component_data_combat_effect_list_id",
+            "Duration": "int",
+            "SpellLevel": "int",
+            "TargetType": "fk_component_data_target_type_id"
+        }
     },
     "Status": {
-        "Label": "type_ShortString",
-        "Name": "type_MediumString",
-        "Description": "type_LongString",
-        "Duration": "int",
-        "Value": "int"
+        "metadata": {
+            "Description": "An ongoing effect on this entity"
+        },
+        "variables": {
+            "Label": "type_ShortString",
+            "Name": "type_MediumString",
+            "Description": "type_LongString",
+            "Duration": "int",
+            "Value": "int"
+        }
     },
-    "StatusList": {},
+    "StatusList": {
+        "metadata": {
+            "Description": "List of statuses"
+        },
+        "variables": {}
+    },
     "TargetType": {
-        "Label": "type_ShortString",
-        "Name": "type_MediumString"
+        "metadata": {
+            "Description": "What type of targetting does this use?"
+        },
+        "variables": {
+            "Label": "type_ShortString",
+            "Name": "type_MediumString"
+        }
     },
     "TransitionProperties": {
-        "GlobalConditionId": "fk_component_data_global_condition_id",
-        "GoTo": "fk_component_data_go_to_id",
-        "ListPriority": "int",
-        "WhereText": "type_MediumString"
+        "metadata": {
+            "Description": "Where does this entity lead? How is it accessed?"
+        },
+        "variables": {
+            "GlobalConditionId": "fk_component_data_global_condition_id",
+            "GoTo": "fk_component_data_go_to_id",
+            "ListPriority": "int",
+            "WhereText": "type_MediumString"
+        }
     },
     "Trigger": {
-        "Label": "type_ShortString",
-        "Description": "type_LongString",
-        "ArgumentType": "fk_component_data_argument_type_id",
-        "Argument": "type_ShortString"
+        "metadata": {
+            "Description": "A triggered event"
+        },
+        "variables": {
+            "Label": "type_ShortString",
+            "Description": "type_LongString",
+            "ArgumentType": "fk_component_data_argument_type_id",
+            "Argument": "type_ShortString"
+        }
     },
     "Value": {
-        "GoldValue": "int",
-        "IsSellable": "bit"
+        "metadata": {
+            "Description": "How much are others willing to pay for this?"
+        },
+        "variables": {
+            "GoldValue": "int",
+            "IsSellable": "bit"
+        }
     }
 }

@@ -9,6 +9,16 @@ from project_config import __database_name as database_name
 
 __component_data_file_path = ROOT_DIR + "data\\components.json"
 
+def generate_component_data_insert_script(table_scripts):
+    insert_script = "insert into Components(name, description, table_name)\nvalues\n"
+    insert_lines = []
+    for script in table_scripts:
+        component = script["component"]
+        description = script["metadata"]["Description"]
+        insert_lines.append(f"('{component}', '{description}','ComponentData_{component}')")
+    insert_script += ",\n".join(insert_lines) + "\n"
+    return insert_script        
+
 def generate_component_data_table_scripts():
     with open(__component_data_file_path) as input_file:
         data = json.load(input_file)
@@ -28,20 +38,21 @@ def __add_table_script_with_dependencies(table_scripts, component, data):
     if(__component_exists(table_scripts, component)):
         return table_scripts
 
-    variables_json = data[component]
+    variables_json = data[component]["variables"]
     for variable_name in variables_json:
         variable_type = variables_json[variable_name]
         if(is_foreign_key_for_component(variable_type)):
             foreign_component = cu.snake_to_camel_case(variable_type[len("fk_component_data_"):len(variable_type)-len("_id")])
-            # print(f"{component} depends on {foreign_component}")
+            # {component} depends on {foreign_component}
             if(__component_exists(table_scripts, foreign_component) == False):
-                # print(f"Have to add {foreign_component} before {component}")
+                # Have to add {foreign_component} before {component}
                 __add_table_script_with_dependencies(table_scripts, foreign_component, data)
 
     table_script = __create_table_script(component, variables_json)
     table_scripts.append({
         "script": table_script,
-        "component": component
+        "component": component,
+        "metadata": data[component]["metadata"]
     })
 
     return table_scripts
@@ -57,7 +68,7 @@ def __create_table_script(table_name, variables_json):
 
     for variable_name in variables_json:
         variable_type = variables_json[variable_name]
-        variable_declaration_string = f"{variable_name} {variable_type} not null"
+        variable_declaration_string = f"[{variable_name}] [{variable_type}] not null"
         variable_declaration_strings.append(variable_declaration_string)
 
         if(is_foreign_key_for_component(variable_type)):
@@ -71,7 +82,7 @@ def __create_table_script(table_name, variables_json):
             foreign_key_alters.append(foreign_key_alter)
 
     indent_str = "    "
-    variable_declarations_block = f"\n{indent_str}{indent_str}{indent_str}".join(variable_declaration_strings)
+    variable_declarations_block = f",\n{indent_str}{indent_str}{indent_str}".join(variable_declaration_strings)
     foreign_key_alters_block = f"\n{indent_str}{indent_str}".join([indent(s, f"{indent_str}{indent_str}") for s in foreign_key_alters])
 
     table_script = dedent(f'''
