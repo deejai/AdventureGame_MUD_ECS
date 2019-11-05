@@ -10,8 +10,8 @@ GO
 
 CREATE TABLE [dbo].[Assemblages](
 	[assemblage_id] [int] IDENTITY(1,1) NOT NULL,
-	[name] [varchar](256) NOT NULL,
-	[description] [varchar](256) NOT NULL,
+	[name] [type_MediumString] NOT NULL,
+	[description] [type_LongString] NOT NULL,
  CONSTRAINT [PK_Assemblages_assemblage_id] PRIMARY KEY CLUSTERED 
 (
 	[assemblage_id] ASC

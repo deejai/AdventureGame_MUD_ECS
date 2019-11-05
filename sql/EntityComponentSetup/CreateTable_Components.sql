@@ -10,9 +10,9 @@ GO
 
 CREATE TABLE [dbo].[Components](
 	[component_id] [int] IDENTITY(1,1) NOT NULL,
-	[name] [varchar](256) NOT NULL,
-	[description] [varchar](256) NOT NULL,
-	[table_name] [varchar](256) NOT NULL,
+	[name] [type_MediumString] NOT NULL,
+	[description] [type_LongString] NOT NULL,
+	[table_name] [type_MediumString] NOT NULL,
  CONSTRAINT [PK_Components_component_id] PRIMARY KEY CLUSTERED 
 (
 	[component_id] ASC

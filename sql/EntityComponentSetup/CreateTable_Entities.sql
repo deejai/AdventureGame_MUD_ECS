@@ -10,7 +10,7 @@ GO
 
 CREATE TABLE [dbo].[Entities](
 	[entity_id] [int] IDENTITY(1,1) NOT NULL,
-	[description] [varchar](256) NOT NULL,
+	[description] [type_LongString] NOT NULL,
  CONSTRAINT [PK_Entities_entity_id] PRIMARY KEY CLUSTERED 
 (
 	[entity_id] ASC
