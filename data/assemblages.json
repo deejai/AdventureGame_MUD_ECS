@@ -1,0 +1,32 @@
+{
+    "BasicCharacter": {
+        "metadata": {
+            "Description": "Reference and add description, dispositionlist, and dialoguestateproperties to create a basic NPC"
+        },
+        "ComponentValues": {
+            "Health": {
+                "Max": 4,
+                "Current": 4,
+                "OverhealMax": 1
+            },
+            "Attributes": {
+                "Strength": 3,
+                "Agility": 3,
+                "Intelligence": 3
+            }
+        }
+    },
+    "RatEnemy": {
+        "Template": "BasicCharacter",
+        "ComponentValues": {
+            "Health": {
+                "OverhealMax": 0
+            },
+            "Attributes": {
+                "Strength": 2,
+                "Intelligence": 2
+            },
+            "DispositionList"
+        }
+    }
+}
