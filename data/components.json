@@ -99,7 +99,7 @@
             "Name": "type_MediumString"
         }
     },
-    "DialogueStateProperties": {
+    "DialogueState": {
         "metadata": {
             "Description": "Prompt and responses for this entity"
         },
@@ -211,6 +211,25 @@
         },
         "variables": {}
     },
+    "RoomSlot": {
+        "metadata": {
+            "Description": "Something that could be in a room"
+        },
+        "variables": {
+            "Name": "type_MediumString",
+            "Description": "type_LongString",
+            "UnidentifiedName": "type_MediumString",
+            "UnidentifiedDescription": "type_LongString",
+            "ArgumentType": "fk_component_data_argument_type_id",
+            "Argument": "type_ShortString"
+        }
+    },
+    "RoomSlotList": {
+        "metadata": {
+            "Description": "List of rooms"
+        },
+        "variables": {}
+    },
     "SpellProperties": {
         "metadata": {
             "Description": "How does this spell work?"
@@ -258,6 +277,12 @@
             "Label": "type_ShortString",
             "Name": "type_MediumString"
         }
+    },
+    "TransitionList": {
+        "metadata": {
+            "Description": "List of transitions"
+        },
+        "variables": {}
     },
     "TransitionProperties": {
         "metadata": {

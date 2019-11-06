@@ -23,7 +23,14 @@
             "Description": ""
         },
         "Components": [
-            
+            "Attributes",
+            "Blessing",
+            "Equipped",
+            "Health",
+            "Status",
+            "ContainerSlotList",
+            "StatusList",
+            "CategoryList"
         ]
     },
     "NPC": {
@@ -31,7 +38,10 @@
             "Description": ""
         },
         "Components": [
-            
+            "DispositionList",
+            "Health",
+            "ResponseList",
+            "DialogueStateProperties"
         ]
     },
     "Room": {
