@@ -17,6 +17,11 @@
         }
     },
     "RatEnemy": {
+        "metadata": {
+            "Name": "Hostile Rat",
+            "Description": "He looks angry!",
+            "fn_randomRatName_Name": "RandomRatName"
+        },
         "Template": "BasicCharacter",
         "ComponentValues": {
             "Health": {
@@ -26,7 +31,15 @@
                 "Strength": 2,
                 "Intelligence": 2
             },
-            "DispositionList"
+            "DispositionList": ""
+        }
+    },
+    "BasicRatEnemy": {
+        "Template": "RatEnemy",
+        "RandomComponentValues": {
+            "Health": {
+                "Current": [[3, 3], [1, 2]]
+            }
         }
     }
 }
