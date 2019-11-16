@@ -1,0 +1,225 @@
+{
+    "start": "lobby.html",
+    "rooms": [
+        {
+            "name": "Lobby",
+            "url": "lobby.html",
+            "transitions": [
+                {
+                    "description": "a restroom door to the west",
+                    "goto": "lobby_bathrooms.html"
+                },
+                {
+                    "description": "a pair of big golden doors to the north",
+                    "goto": "main_hall.html"
+                },
+                {
+                    "description": "the front entrance to the south",
+                    "goto": "#"
+                }
+            ]
+        },
+        {
+            "name": "Lobby Bathrooms",
+            "url": "lobby_bathrooms.html",
+            "transitions": [
+                {
+                    "description": "the door back to the lobby",
+                    "goto": "lobby.html"
+                }
+            ]
+        },
+        {
+            "name": "Main Hall",
+            "url": "main_hall.html",
+            "transitions": [
+                {
+                    "description": "a big steel door to the west",
+                    "goto": "kitchen.html"
+                },
+                {
+                    "description": "a set of double doors to the north",
+                    "goto": "dining_room.html"
+                },
+                {
+                    "description": "a wooden door to the east",
+                    "goto": "sleeping_quarters.html"
+                },
+                {
+                    "description": "a pair of big golden doors to the south",
+                    "goto": "lobby.html"
+                }
+            ]
+        },
+        {
+            "name": "Sleeping Quarters",
+            "url": "sleeping_quarters.html",
+            "transitions": [
+                {
+                    "description": "a small white door to the north",
+                    "goto": "guest_bathroom.html"
+                },
+                {
+                    "description": "a wooden door to the south labeled \"guest bedrooms\"",
+                    "goto": "guest_hall.html"
+                },
+                {
+                    "description": "a wooden door to the east",
+                    "goto": "butlers_room.html"
+                },
+                {
+                    "description": "an engraved wooden door with a golden knob to the north east",
+                    "goto": "master_hall.html"
+                }
+            ]
+        },
+        {
+            "name": "Guest Hall",
+            "url": "guest_hall.html",
+            "transitions": [
+                {
+                    "description": "a wooden door labeled \"A\"",
+                    "goto": "guest_bedroom_a.html"
+                },
+                {
+                    "description": "a wooden door labeled \"B\"",
+                    "goto": "guest_bedroom_b.html"
+                },
+                {
+                    "description": "a wooden door labeled \"C\"",
+                    "goto": "guest_bedroom_c.html"
+                },
+                {
+                    "description": "a wooden door labeled \"D\"",
+                    "goto": "guest_bedroom_d.html"
+                },
+                {
+                    "description": "a wooden door to the north",
+                    "goto": "sleeping_quarters.html"
+                }
+            ]
+        },
+        {
+            "name": "Guest Bedroom A",
+            "url": "guest_bedroom_a.html",
+            "transitions": [
+                {
+                    "description": "a wooden door",
+                    "goto": "guest_hall.html"
+                }
+            ]
+        },
+        {
+            "name": "Guest Bedroom B",
+            "url": "guest_bedroom_b.html",
+            "transitions": [
+                {
+                    "description": "a wooden door",
+                    "goto": "guest_hall.html"
+                }
+            ]
+        },
+        {
+            "name": "Guest Bedroom C",
+            "url": "guest_bedroom_c.html",
+            "transitions": [
+                {
+                    "description": "a wooden door",
+                    "goto": "guest_hall.html"
+                }
+            ]
+        },
+        {
+            "name": "Guest Bedroom D",
+            "url": "guest_bedroom_d.html",
+            "transitions": [
+                {
+                    "description": "a wooden door",
+                    "goto": "guest_hall.html"
+                }
+            ]
+        },
+        {
+            "name": "Butler's Room",
+            "url": "butlers_room.html",
+            "transitions": [
+                {
+                    "description": "a wooden door",
+                    "goto": "sleeping_quarters.html"
+                }
+            ]
+        },
+        {
+            "name": "Master Hall",
+            "url": "master_hall.html",
+            "transitions": [
+                {
+                    "description": "heavy embossed double doors to the north",
+                    "goto": "master_bedroom.html"
+                },
+                {
+                    "description": "an engraved wooden door with a golden knob to the south",
+                    "goto": "sleeping_quarters.html"
+                }
+            ]
+        },
+        {
+            "name": "Master Bedroom",
+            "url": "master_bedroom.html",
+            "transitions": [
+                {
+                    "description": "heavy embossed double doors to the south",
+                    "goto": "master_hall.html"
+                },
+                {
+                    "description": "a wooden door to the west",
+                    "goto": "master_bathroom.html"
+                },
+                {
+                    "description": "a wooden door with a golden knob to the east",
+                    "goto": "master_office.html"
+                }
+            ]
+        },
+        {
+            "name": "Master Bathroom",
+            "url": "master_bathroom.html",
+            "transitions": [
+                {
+                    "description": "a wooden door",
+                    "goto": "master_bedroom.html"
+                }
+            ]
+        },
+        {
+            "name": "Master Office",
+            "url": "master_office.html",
+            "transitions": [
+                {
+                    "description": "a wooden door with a golden knob",
+                    "goto": "master_bedroom.html"
+                }
+            ]
+        },
+        {
+            "name": "Kitchen",
+            "url": "kitchen.html",
+            "transitions": [
+                {
+                    "description": "a big steel door",
+                    "goto": "main_hall.html"
+                }
+            ]
+        },
+        {
+            "name": "Dining Room",
+            "url": "dining_room.html",
+            "transitions": [
+                {
+                    "description": "a set of double doors",
+                    "goto": "main_hall.html"
+                }
+            ]
+        }
+    ]
+}
