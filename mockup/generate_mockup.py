@@ -1,18 +1,25 @@
-import json
 import os
+import shutil
 from textwrap import dedent
+from mockup_utils import WEBSITE_PATH, get_location_data
 
-ROOT_DIR = os.path.dirname(os.path.abspath(__file__)) + "\\..\\"
-MOCKUP_PATH = ROOT_DIR + "mockup/"
-WEBSITE_PATH = MOCKUP_PATH + "website/"
+def empty_web_folder():
+    for the_file in os.listdir(WEBSITE_PATH):
+        file_path = os.path.join(WEBSITE_PATH, the_file)
+        try:
+            if os.path.isfile(file_path):
+                os.unlink(file_path)
+            elif os.path.isdir(file_path): shutil.rmtree(file_path)
+        except Exception as e:
+            print(e)
 
-def generate_html(name, transitions):
+def generate_html(name, transitions, header=""):
     ul_indent = "                    "
     trans_strings = []
     for transition in transitions:
-        trans_url = transition["goto"]
+        trans_label = transition["goto"]
         trans_desc = transition["description"]
-        trans_string = f"<li><a href=\"{trans_url}\">{trans_desc}</a></li>"
+        trans_string = f"<li><a href=\"{trans_label}.html\">{trans_desc}</a></li>"
         trans_strings.append(trans_string)
 
     trans_block = f"\n{ul_indent}".join(trans_strings)
@@ -28,7 +35,7 @@ def generate_html(name, transitions):
                 <h1>
                     {name}
                 </h1>
-                <h2>You see...</h2>
+                <h2>{header}</h2>
                 <ul>
                     {trans_block}
                 </ul>
@@ -37,15 +44,8 @@ def generate_html(name, transitions):
 
     return html_string
 
-def get_data():
-    data = None
-    with open(MOCKUP_PATH + "rat_manor.json") as f:
-        data = json.load(f)
-
-    return data
-
 def generate():
-    data = get_data()
+    data = get_location_data("rat_manor")
     start = data["start"]
     rooms = data["rooms"]
 
@@ -55,11 +55,12 @@ def generate():
     for room in rooms:
         room_name = room["name"]
         room_transitions = room["transitions"]
-        with open(WEBSITE_PATH + room["url"], "w+") as f:
-            f.writelines(generate_html(room_name, room_transitions))
+        with open(WEBSITE_PATH + room["label"] + ".html", "w+") as f:
+            f.writelines(generate_html(room_name, room_transitions, "You see..."))
 
 
 def main():
+    empty_web_folder()
     generate()
 
 if __name__ == "__main__":
