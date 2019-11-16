@@ -1,4 +1,5 @@
 {
+    "name": "Rat Manor",
     "start": "lobby",
     "rooms": [
         {
@@ -70,6 +71,10 @@
                 {
                     "description": "an engraved wooden door with a golden knob to the north east",
                     "goto": "master_hall"
+                },
+                {
+                    "description": "a wooden door to the west",
+                    "goto": "main_hall"
                 }
             ]
         },
