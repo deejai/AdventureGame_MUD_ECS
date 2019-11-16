@@ -2,19 +2,32 @@ from graphviz import Digraph
 from mockup_utils import get_location_data
 
 def generate_graph(location_data):
-    g = Digraph("test", filename="test.gv")
-    g.graph_attr["splines"] = "ortho"
-    g.node_attr["shape"] = "rectangle"
-    g.edge("Hi", "Bye")
-    g.edge("Hi", "Hello")
-    g.edge("Hello", "Oy")
-    g.edge("Bye", "Ey")
-    g.edge("Oy", "Ey")
-    g.edge("Hello", "Ay")
-    g.edge("Ay", "Oy")
+    graph_attr = {"":""
+        ,"splines": "ortho"
+        ,"concentrate": "true"
+        ,"pad": "0.2"
+        ,"nodesep": "1"
+        ,"ranksep": "1"
+    }
+
+    node_attr = {"":""
+        ,"shape": "rectangle"
+    }
+
+    g = Digraph(location_data["name"], filename="test.gv", graph_attr=graph_attr, node_attr=node_attr)
+
+    rooms = location_data["rooms"]
+
+    for room in rooms:
+        label = room["label"]
+        transitions = room["transitions"]
+        for transition in transitions:
+            g.edge(label, transition["goto"])
+
     g.view()
 
 def test():
-    generate_graph(get_location_data("rat_manor"))
+    location_data = get_location_data("rat_manor")
+    generate_graph(location_data)
 
 test()
