@@ -1,13 +1,21 @@
 {
-    "ArgumentType": {
+    "Argument": {
         "metadata": {
-            "Description": "Basic descriptive strings"
+            "Description": "argument"
         },
         "variables": {
             "Label": "type_ShortString",
             "Name": "type_MediumString",
-            "Description": "type_LongString"
+            "Description": "type_LongString",
+            "Type": "type_ShortString",
+            "Argument": "type_LongString"
         }
+    },
+    "ArgumentList": {
+        "metadata": {
+            "Description": "Basic character attributes"
+        },
+        "variables": []
     },
     "Attributes": {
         "metadata": {
@@ -302,8 +310,7 @@
         "variables": {
             "Label": "type_ShortString",
             "Description": "type_LongString",
-            "ArgumentType": "fk_component_data_argument_type_id",
-            "Argument": "type_ShortString"
+            "ArgumentList": "type_component_data_argument_id"
         }
     },
     "TriggerList": {
