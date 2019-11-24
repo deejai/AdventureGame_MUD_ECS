@@ -41,7 +41,9 @@
             "DispositionList",
             "Health",
             "ResponseList",
-            "DialogueStateProperties"
+            "DialogueState",
+            "Equipped",
+            "CategoryList"
         ]
     },
     "Room": {
@@ -49,7 +51,7 @@
             "Description": ""
         },
         "Components": [
-            
+            "TransitionList",
         ]
     },
     "Combat": {

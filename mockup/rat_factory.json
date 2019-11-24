@@ -1,0 +1,60 @@
+{
+    "name": "Cheese Factory",
+    "start": "Parking Lot",
+    "rooms": [
+        {
+            "name": "Outside the Factory",
+            "description": "You exit the cab and stand outside the local cheese factory.",
+            "label": "CF_Parking_Lot",
+            "transitions": [
+                {
+                    "description": "There's a picket line in front of the factories",
+                    "goto": "CF_Picket_Line"
+                },
+            ],
+            "ph_npcs": [
+                {
+                    "name": "ph_CF_NPC_Mark",
+                    "description": [
+                        {                        
+                         "There's a rat hanging out by his bike",
+                        "ph_CF_NPC_Mark_Met,1": "Mark is by his bike"                                                     
+                        }
+                    ],
+                    "goto": "ph_CF_NPC_Mark_Conversation"
+                }
+            ]
+        },
+        {
+            "name": "Picket Line Outside Cheese Factory",
+            "label": "CF_Picket_Line",
+            "transitions": [
+                {
+                    :ph_TriggerList = "UnionDisapproval",
+                    "description": "the picketers are block the way into the factory",
+                    "goto": "null"
+                }
+                {
+                    :ph_TriggerList = "UnionApproval",
+                    "description": "the way is clear to head into the factory",
+                    "goto": "CF_Factory_Lobby"
+                },
+
+                {
+                    :ph_TriggerList = "UnionDefeat_1",
+                    "description": "The picketers are leaving me alone on my way back in",
+                    "goto": "CF_Factory_Lobby"
+                }
+            ],
+            "ph_NPC": [
+                {
+                    "name": "Union Leader"
+                }
+            ]
+        }
+    ],
+    "ph_conversations": [
+        {
+            "name": "ph_CF_NPC_Mark_Conversation"
+        }
+    ]
