@@ -17,7 +17,23 @@
                 {
                     "description": "the front entrance to the south",
                     "goto": "#"
+                },
+                {
+                    "description": "crazy place",
+                    "goto": "crazy_place"
                 }
+            ],
+            "trigger": {
+                "variables": {
+                    "Label": "Rusty metal lever",
+                    "Description": "Looks like a lever",
+                    "ArgumentType": "door_to_open",
+                    "Argument": "rat_manor_lobby_bathroom_door"
+                }
+            },
+            "notes": [
+                "note 1 dfdhsfkj  dsfhks",
+                "note 2 fuck u"
             ]
         },
         {
@@ -233,6 +249,16 @@
                 {
                     "description": "a small white door",
                     "goto": "sleeping_quarters"
+                }
+            ]
+        },
+        {
+            "name": "Crazy Place",
+            "label": "crazy_place",
+            "transitions": [
+                {
+                    "description": "door back to Lobby Bathrooms",
+                    "goto": "lobby_bathrooms"
                 }
             ]
         }
