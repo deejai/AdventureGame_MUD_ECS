@@ -14,11 +14,12 @@
             ],
             "ph_npcs": [
                 {
-                    "name": "ph_CF_NPC_Mark",
-                    "description": [
-                        {                        
-                         "There's a rat hanging out by his bike",
-                        "ph_CF_NPC_Mark_Met,1": "Mark is by his bike"                                                     
+                    "name":"Mark",
+                    "label": "ph_CF_NPC_Mark",
+                    "description": [  
+                        {                 
+                        if Trigger "CF_NPC_MARK_MET" is met: "Mark is looking defeated still standing by his bike",                          
+                        else: "There's a rat hanging out by his bike"                                                
                         }
                     ],
                     "goto": "ph_CF_NPC_Mark_Conversation"
@@ -27,34 +28,82 @@
         },
         {
             "name": "Picket Line Outside Cheese Factory",
+            "description": "Outside of the factory there is a large amount of people with signs screaming.",
             "label": "CF_Picket_Line",
             "transitions": [
                 {
-                    :ph_TriggerList = "UnionDisapproval",
-                    "description": "the picketers are block the way into the factory",
-                    "goto": "null"
+                    if trigger "CF_PROLETARAT_ENTRANCE_BATTLE_WON" is met
+                        "description": "The picketers are leaving me alone on my way back in",
+                        "goto": "CF_Lobby",
+                    else if trigger "CF_PROLETARAT_APPROVAL" is met
+                        "description": "the way is clear to head into the factory",
+                        "goto": "CF_Lobby",
+                    else
+                        "description": "the picketers are blocking the way into the factory",
+                        "goto": "null"
                 }
                 {
-                    :ph_TriggerList = "UnionApproval",
-                    "description": "the way is clear to head into the factory",
-                    "goto": "CF_Factory_Lobby"
-                },
-
-                {
-                    :ph_TriggerList = "UnionDefeat_1",
-                    "description": "The picketers are leaving me alone on my way back in",
-                    "goto": "CF_Factory_Lobby"
+                    "description": "The parking lot is back over here.",
+                    "goto": "CF_Parking_Lot"
                 }
             ],
-            "ph_NPC": [
+            "ph_npcs": [
                 {
-                    "name": "Union Leader"
+                    "name": "Rook Burrows",
+                    "label": "CF_Proletarat_Rook",
+                    "description": [
+                        {
+                            if trigger "CF_PROLETARAT_ROOK_MET" is met: "Rook is standing in front of the crowd looking as spunky as ever",
+                            else: "There's a very spunky rat that looks like they're the organizer of this picket."                        
+                        }
+                    ],
+                    "goto": "ph_CF_Proletarat_Rook_Conversation"
                 }
             ]
         }
-    ],
-    "ph_conversations": [
         {
-            "name": "ph_CF_NPC_Mark_Conversation"
+            "name": "Cheese Factory Lobby",
+            "description": "The lobby of the factory is well furnished. There's a painting of the founder behind the front desk. Next to the entrance is a golden statue of the founder planting a flag in a comically sized block of cheese.",
+            "label": "CF_Lobby",
+            "transitions":[
+                {
+                    "description": "The front entrance leads back to the picket line",
+                    "goto": "CF_Picket_Line"
+                }
+                {
+                    "description": "There's a unirat bathroom on the right side.",
+                    "goto": "CF_Lobby_Bathroom"
+                }
+                {
+                    if trigger "CF_LOBBY_DOOR_UNLOCK" is met
+                        "description": "The forerats office is in the corner.",
+                        "goto": "CF_FORERAT_OFFICE",
+                    else
+                        "description": "The forerats office is over there. There's a do not disturb sign on the door",
+                        "goto": "null"
+                }
+                {
+                    if trigger "CF_PRODUCTION_LINE_OPEN" is met
+                        "description": "Larry will buzz me into the production line room.",
+                        "goto": "CF_PRODUCTION_LINE",
+                    else
+                        "description": "There's 2 doors that leads deeper in that needs security access to enter.",
+                        "goto": "null"
+                }
+            ],
+            "ph_npcs": [
+                {
+                    "name": "Larry Whiterat",
+                    "label": "CF_Receptionist_Larry",
+                    "description": [
+                        {
+                            if trigger "CF_LARRY_RECEPTIONIST_MET" is met: "Larry is sitting at his desk, looking like he's about to fall asleep",
+                            else: "There's a rat asleep at the front desk."
+                        }
+                    ],
+                    "goto": "CF_Recptionist_Larry_Conversation"
+                }
+            ]
         }
     ]
+        }
