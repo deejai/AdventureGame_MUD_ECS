@@ -1,0 +1,79 @@
+NPCs:
+
+1. Forerat - talkative - cocky - gives blueprints if you break up union
+2. Receptionist - talkative - sass - gives access to Forerate office
+3. Union Leader - talkative - spunky - gives access to building
+4. Defeated Worker - tired - sad
+5. Anti Union Worker - talkative - agitated - gives item
+6. Maintenance Rat - reserved - agitated - talk to get maintenance key
+7. Rat Resources (RR) Rep - talkative - spunky
+
+Goal: The local cheese factory has a new way of preserving food for long periods of time. You need to get these blueprints by any means and bring back to your town to help prepare more food for the long winters.
+
+Rooms:
+    1. Parking lot
+        Connects to: Picket line
+        NPCs: Defeated Worker
+    2. Picket line
+        Connects to: Parking lot, Lobby, Maintenance office
+        NPCs: Union Leader
+    3. Lobby
+        Connects to: Picket line, Forerat office, Unirat bathroom, Production line
+        NPCs: Receptionist 
+    4. Forerat office
+        Connects to: Lobby, Hidden room
+        NPCs: Forerat, none (if sabotage done)
+    5. Unirat bathroom
+        Connects to: Maintenance office, Lobby
+        NPCs: None
+    6. Production line
+        Connects to: Lobby, Rat Resources
+        NPCs: Anti Union Worker, Forerat (if sabotage done)
+    7. Maintenance office
+        Connects to: Picket line, Unirat bathroom
+        NPCs: Maintenance Rat
+    8. Rat Resources
+        Connects to: Production line
+        NPCs: RR Rep
+    9. Hidden room 
+        Connects to: Forerat office
+        NPCs: NNone
+
+
+Obstacles: 
+1. Union Leader will not let you in the building as he will not let anybody cross the picket line.
+
+	Possible solutions:
+		1. Use a crowbar to break in via a vent you break on the outside of the factory. Takes you into the building through the vents and out into the lobby bathroom
+        2. Convince the union leader you're not a scab and let you through
+        3. Scare the union leader to let you pass
+
+2. Forerat will not give you the blueprint unless you pay him 10 million gold or break up the union.
+
+    Possible solutions:
+        1. Accept his deal and go out and break up the union.            
+        2. Find evidence of corruption to force him to give up the blueprints as a trade
+        3. Reject his offer but say you are looking for work and are willing to work as a scab. While training on the line, purposely sabotage the line to get the forerat out of his office and give you the ability to steal the blueprints.
+
+3. Forerat office is locked
+
+    Solution:
+        1. Talk to receptionist to get permission to enter
+
+4. Production line is locked
+
+    Solution:
+        1. Talk to forerat and either become a scab or say you'll break up the union
+
+5. Maintenance Office is locked
+
+    Solution:
+        1. Bring a crowbar from offsite to break open vent blocking way to maintenance from picket line
+
+
+Unique Interactions:
+
+1. Golden statue of forerat in lobby steals your gold
+2. Mini game where you have to work the production line. Option to fail on purpose to stop the production line
+3. Hidden button in forerat office when vacant activates a hidden room that only contains a glassed case of a giant piece of cheese and a special equipment (missable)
+4. Rats keep maintenance offices in ventilation system as a reference to how rats were protrayed prior to mutations.

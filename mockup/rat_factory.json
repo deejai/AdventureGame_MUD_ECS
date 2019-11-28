@@ -19,7 +19,7 @@
                     "description": [  
                         {                 
                         if Trigger "CF_NPC_MARK_MET" is met: "Mark is looking defeated still standing by his bike",                          
-                        else: "There's a rat hanging out by his bike"                                                
+                        else: "There's a rat hanging out by a bike."                                                
                         }
                     ],
                     "goto": "ph_CF_NPC_Mark_Conversation"
@@ -28,7 +28,7 @@
         },
         {
             "name": "Picket Line Outside Cheese Factory",
-            "description": "Outside of the factory there is a large amount of people with signs screaming.",
+            "description": "Outside of the factory there is a large amount of rats with signs screeching.",
             "label": "CF_Picket_Line",
             "transitions": [
                 {
@@ -102,6 +102,20 @@
                         }
                     ],
                     "goto": "CF_Recptionist_Larry_Conversation"
+                }
+            ]
+        }
+        {
+            "name": "Cheese Factory Unirat Bathroom",
+            "description": "There's a few stalls with golden toilets. The mirrors and toilets are very dirty and for some reason there are no sinks.",
+            "label": "CF_Lobby_Bathroom",
+            "transitions": [
+                {
+                    "description": "The lobby is back out the door",
+                    "goto": "CF_Lobby"
+                }
+                {
+                    if item ""
                 }
             ]
         }
