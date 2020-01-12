@@ -115,9 +115,15 @@
                     "goto": "CF_Lobby"
                 }
                 {
-                    if item ""
+                    if trigger "CF_MAINTENANCE_OFFICE_FOUND" is met,
+                    "description": "The vent is open so I can get back into the maintenance office from here.",
+                    "goto": "CF_Maintenance_Office"
                 }
             ]
+        }
+        {
+            "name": "Forerat Office",
+            "description": ""
         }
     ]
         }
